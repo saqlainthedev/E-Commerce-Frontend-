@@ -1,0 +1,340 @@
+/* Slider Section */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust height for a larger slider */
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+}
+
+.slide-active {
+  display: block;
+  opacity: 1;
+}
+
+.slide img {
+  width: 70%; /* Set to 70% of the slider width */
+  height: 80%; /* Maintain the height setting */
+  object-fit: cover; /* Ensures the image covers the container */
+  margin-left: 23 ; /* Centers the image */
+  
+}
+/* Banner styles for vertical display */
+.banner {
+  width: 100px;  /* Set the width of the vertical banner */
+  height: 300px;  /* Set the height of the vertical banner */
+  background-color: #ff5733;  /* Choose your desired color */
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: fixed; /* Fixed position so it's always visible */
+  top: 20%;        /* Adjust the position as needed */
+  right: 0;        /* Align it to the right side */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rotate the text inside the banner */
+.banner p {
+  margin: 0;
+  transform: rotate(90deg);  /* Rotate the text to be vertical */
+  transform-origin: center center;  /* Center the rotation point */
+  white-space: nowrap;       /* Prevent text wrapping */
+}
+
+
+.slider-text {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 2; /* Ensure text is above the image */
+}
+
+
+/* Product Section */
+.product-section {
+  margin: 40px 0;
+}
+
+.product-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); /* Makes the layout responsive */
+  gap: 20px;
+  justify-items: center;
+  margin-top: 30px;
+}
+
+.product-item {
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.product-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover; /* Keeps image proportions and avoids stretching */
+  border-radius: 10px; /* Optional: Add rounded corners */
+  transition: box-shadow 0.3s ease-in-out; /* Keep shadow transition if needed */
+}
+
+.product-item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+/* Price and Discount Styles */
+.product-price-off {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.product-price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333; /* Neutral dark color for the price */
+}
+
+.product-off {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #e74c3c; /* Red for the discount percentage */
+}
+
+/* Optional: Add styles for the product name and description */
+.product-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: #666;
+}
+.men-page {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.men-page-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.category {
+  margin-bottom: 40px;
+}
+
+.category-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.category-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.item-card {
+  text-align: center;
+  width: 150px;
+}
+
+.item-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.item-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.item-name {
+  font-size: 1rem;
+}
+
+
+
+@media (max-width: 768px) {
+  .slider {
+    height: 400px; /* Adjust slider height on smaller screens */
+  }
+
+  .slider-text {
+    font-size: 1.2rem; /* Reduce text size on smaller screens */
+  }
+
+  .product-section h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .product-item img {
+    height: 250px; /* Resize images in product section */
+  }
+}
+/* Price and Discount Styles */
+.product-price-off {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f7f7f7; /* Light background for contrast */
+  border-radius: 8px; /* Rounded corners for a cleaner look */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333; /* Neutral dark color for the price */
+  text-decoration: none; /* Ensure no underline if linked */
+  margin-right: 10px; /* Space between price and discount */
+}
+
+.product-off {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e74c3c; /* Red for the discount percentage */
+  background-color: #fff; /* White background for contrast */
+  padding: 5px 10px; /* Padding to create a button-like effect */
+  border-radius: 4px; /* Rounded corners for the discount tag */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Optional: Add a strike-through for the original price */
+.product-price-old {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #999; /* Light gray for original price */
+  text-decoration: line-through; /* Strike-through style */
+  margin-right: 10px; /* Space for better alignment */
+}
+/* Product Image Container */
+.product-item {
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add favorite and add to cart buttons inside the product image */
+.product-image-container {
+  position: relative;
+}
+
+.product-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-item img:hover {
+  transform: scale(1.05); /* Slight zoom on hover for interactivity */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds a shadow for better focus */
+}
+
+/* Hide the buttons by default and display on hover */
+.product-buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none; /* Hidden by default */
+  gap: 20px; /* Space between buttons */
+}
+
+.product-item:hover .product-buttons {
+  display: flex; /* Show buttons on hover */
+}
+
+/* Styling for the buttons */
+.favorite-btn, .add-to-cart-btn {
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem; /* Larger size for easy click */
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.favorite-btn:hover, .add-to-cart-btn:hover {
+  opacity: 1; /* Full opacity on hover */
+  transform: scale(1.1); /* Slight scale-up for interaction */
+}
+
+.favorite-btn {
+  background-color: rgba(255, 0, 0, 0.7); /* Red for the favorite button */
+}
+
+.add-to-cart-btn {
+  background-color: rgba(0, 255, 0, 0.7); /* Green for the add-to-cart button */
+}
+
+/* Product Price and Discount */
+.product-price-off {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f7f7f7;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.product-off {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #e74c3c;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
