@@ -55,7 +55,7 @@ function Navbar() {
           <ul className="navbar-nav d-flex align-items-center">
             {/* Profile */}
             <li className="nav-item">
-              <a className="nav-link" href="#" title="Profile">👤 Profile</a>
+              <a className="nav-link" href="/login" title="Profile">👤 Profile</a>
             </li>
             {/* Wishlist */}
             <li className="nav-item">
